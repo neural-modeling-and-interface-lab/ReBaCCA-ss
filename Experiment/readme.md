@@ -7,7 +7,7 @@ This repository contains data and analysis scripts for a Delayed-Nonmatch to Sam
 - **Right Nonmatch (RN)**
 - **Right Sample (RS)**
 
-The primary goal is to compare neural activity patterns across these conditions and sessions using **ReBaCCA-ss**, followed by visualization with **Multidimensional Scaling (MDS)**. The analysis aims to reveal similarities and differences in neural representations.
+The primary goal is to compare neural activity patterns across these conditions and sessions using **ReBaCCA-ss**, followed by visualization with **Multidimensional Scaling (MDS)**. The analysis aims to reveal similarities and differences in neural representations across different sessions or trial types.
 
 ## Data Description
 
@@ -17,6 +17,16 @@ The preprocessed data is stored in the `Preprocessed data/` directory. Each file
 - `<trial_type>`: One of `'_LEFT_nonmatch'`, `'_LEFT_sample'`, `'_RIGHT_nonmatch'`, `'_RIGHT_sample'`.
 
 Each file contains spike train data for successful trials, organized as a matrix with rows as neurons and columns as time points (in milliseconds).
+
+## How to Run the Analysis
+
+1. **Running the Analysis**:
+   - Run `visualizeSpikeRaster.m` for spike raster plots.
+   - Run `mainTrialSpecificForMDSAcrossSession.m` to perform ReBaCCA analysis and save results (takes time, the results are already stored).
+   - Run `mdsVisualizationAllTogether.m` to generate MDS visualizations.
+
+2. **Parameters**:
+   - Key parameters: `alpha = 0.5`, `tol = 1e-2`, `maxIter = 64`, `percentVar = 1-1e-2`. Adjust in scripts as needed.
 
 ## Scripts and Their Purposes
 
@@ -50,19 +60,3 @@ Each file contains spike train data for successful trials, organized as a matrix
 - **`continuumRegressionMulti.m`**  
   Extends continuum regression to multi-dimensional responses, used within ReBaCCA.
 
-## How to Run the Analysis
-
-1. **Prerequisites**:
-   - MATLAB with the **Statistics and Machine Learning Toolbox** (for `cmdscale`, `kmeans`, etc.).
-   - Multiple CPU cores recommended for parallel computing (`parfor`).
-
-2. **Data Preparation**:
-   - Ensure all preprocessed data files are in `Preprocessed data/`.
-
-3. **Running the Analysis**:
-   - Run `mainTrialSpecificForMDSAcrossSession.m` to perform ReBaCCA analysis and save results.
-   - Run `mdsVisualizationAllTogether.m` to generate MDS visualizations.
-   - Optionally, use `visualizeSpikeRaster.m` for spike raster plots.
-
-4. **Parameters**:
-   - Key parameters: `alpha = 0.5`, `tol = 1e-2`, `maxIter = 64`, `percentVar = 1-1e-2`. Adjust in scripts as needed.
