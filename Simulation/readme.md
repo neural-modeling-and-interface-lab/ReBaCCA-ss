@@ -23,32 +23,27 @@ This simulation evaluates the performance of **ReBaCCA-ss** in comparing neural 
 
 ## Scripts and Their Functions
 
-Each script has the version for 2 scenarios.
+- **`checkTheoreticalCorrelation.m`**, **`checkTheoreticalCorrelationForMatrix.m`**:
+  - Validates theoretical CCA correlation calculations for smoothed spike trains or spike train matrices.
 
-- **`checkTheoreticalCorrelation.m`**:
-  - Validates theoretical CCA correlation calculations for smoothed spike trains.
-  
-- **`checkTheoreticalCorrelationForMatrix.m`**:
-  - Validates theoretical CCA correlation calculations for smoothed spike train matrices.
-
-- **`generateSimulatedData.m`**:
+- **`generateSimulatedData.m`**, **`generateSimulatedData_scenario2.m`**:
   - Generates spike trains and firing rates for the simulation.
   - Saves data for multiple repeats.
 
-- **`main_loop_for_kernel.m`**:
+- **`main_loop_for_kernel.m`**, **`main_scenario2_loop_for_kernel.m`**:
   - Main analysis script for varying kernel bandwidths.
 
-- **`main_loop_for_alpha.m`**:
+- **`main_loop_for_alpha.m`**, **`main_scenario2_loop_for_alpha.m`**:
   - Similar to `main_loop_for_kernel.m` but varies the `alpha` parameter in ReBaCCA-ss.
 
-- **`plotResults.m`**:
+- **`plotResults.m`**, **`plotResults_scenario_2.m`**:
   - Visualizes results, including firing rates, spike rasters, PCA/CCA components, and performance metrics.
 
-- **`export_pdf_figure.m`**:
-  - Utility function to save figures as PDFs with customizable styles and sizes.
-
-- **`plotResultsForAlpha.m`**:
+- **`plotResultsForAlpha.m`**, **`plotResultsForAlpha_scenario_2.m`**:
   - Visualizes how ReBaCCA results change with varying `alpha` values for a specific simulation scenario.
+  
+- **`export_pdf_figure.m`**:
+  - Utility function to save figures as PDFs with customizable styles and sizes. 
   
 - **`continuumRegression.m`**:
   - Implements continuum regression for a single response variable, a core component of ReBaCCA.
