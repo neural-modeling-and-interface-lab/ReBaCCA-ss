@@ -13,7 +13,7 @@ The primary goal is to compare neural activity patterns across these conditions 
 
 The preprocessed data is stored in the `Preprocessed data/` directory. Each file corresponds to a specific recording session and trial type, named as `<session_id>_<trial_type>.mat`, where:
 
-- `<session_id>`: Identifier for the session or animal (e.g., `'1053_6'`, `'1029_1'`).
+- `<session_id>`: Identifier for the animal_session (e.g., `'1053_6'`, `'1029_1'`).
 - `<trial_type>`: One of `'_LEFT_nonmatch'`, `'_LEFT_sample'`, `'_RIGHT_nonmatch'`, `'_RIGHT_sample'`.
 
 Each file contains spike train data for successful trials, organized as a matrix with rows as neurons and columns as time points (in milliseconds).
