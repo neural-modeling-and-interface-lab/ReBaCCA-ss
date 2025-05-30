@@ -29,9 +29,11 @@ Each file contains spike train data for successful trials, organized as a matrix
    - Key parameters: `alpha = 0.5`, `tol = 1e-2`, `maxIter = 64`, `percentVar = 1-1e-2`. Adjust in scripts as needed.
 
 ## Scripts and Their Purposes
+- **`visualizeSpikeRaster.m`**  
+  Generates spike raster plots for selected trials across datasets and trial types.
 
 - **`mainTrialSpecificForMDSAcrossSession.m`**  
-  Main analysis script. Loads spike train data, selects trials, and performs ReBaCCA analysis to compute similarity measures across sessions. Saves results in `Results/`.
+  Main analysis script. Loads spike train data, selects trials, and performs ReBaCCA analysis to compute similarity measures across sessions and trial types. Saves results in `Results/`.
 
 - **`mdsVisualizationAllTogether.m`**  
   Loads ReBaCCA results and visualizes them using MDS. Generates plots showing relationships between conditions and sessions, saved as PDFs in `Fig/`.
@@ -47,16 +49,11 @@ Each file contains spike train data for successful trials, organized as a matrix
 
 - **`continuumRegression.m`**  
   Implements continuum regression, a core component of ReBaCCA, based on Xie et al. (2020).
-
+  
+- **`continuumRegressionMulti.m`**  
+  Extends continuum regression to multi-dimensional responses, used within ReBaCCA.
+  
 - **`ReBaCCAss.m`**  
   Performs ReBaCCA analysis on pairs of spike train datasets, including permutation tests for significance.
 
-- **`visualizeSpikeRaster.m`**  
-  Generates spike raster plots for selected trials across datasets and trial types.
-
-- **`gaussian_kernel_smoothing_per_trial.m`**  
-  Alternative smoothing function that processes spike trains per trial.
-
-- **`continuumRegressionMulti.m`**  
-  Extends continuum regression to multi-dimensional responses, used within ReBaCCA.
 
