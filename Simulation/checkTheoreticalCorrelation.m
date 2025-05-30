@@ -65,4 +65,4 @@ ylim([0 0.3])
 
 legend('Theoretical value', 'Simulation', 'Location', 'best')
 
-export_pdf_figure(1, ['Temp Fig/' num2str(lambda1) 'Hz and ' num2str(lambda2) 'Hz'], 0)
+export_pdf_figure(1, ['Fig/' num2str(lambda1) 'Hz and ' num2str(lambda2) 'Hz'], 0)

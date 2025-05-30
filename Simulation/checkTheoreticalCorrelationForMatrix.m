@@ -80,13 +80,13 @@ plotSpikeRaster(spike_matrix1, size(spike_matrix1,1),T, '', size(spike_matrix1,1
 xticks([]);yticks([])
 box on
 xlabel('');ylabel('')
-export_pdf_figure(gcf, ['Temp Fig/' num2str(totalNeuron1) ' neurons vs ' num2str(totalNeuron2) ' neurons spike matrix 1'], 0)
+export_pdf_figure(gcf, ['Fig/' num2str(totalNeuron1) ' neurons vs ' num2str(totalNeuron2) ' neurons spike matrix 1'], 0)
 
 plotSpikeRaster(spike_matrix2, size(spike_matrix2,1),T, '', size(spike_matrix2,1));
 xticks([]);yticks([])
 box on
 xlabel('');ylabel('')
-export_pdf_figure(gcf, ['Temp Fig/' num2str(totalNeuron1) ' neurons vs ' num2str(totalNeuron2) ' neurons spike matrix 2'], 0)
+export_pdf_figure(gcf, ['Fig/' num2str(totalNeuron1) ' neurons vs ' num2str(totalNeuron2) ' neurons spike matrix 2'], 0)
 
 %% Plot the results
 figure;
@@ -114,4 +114,4 @@ ylim([0 1])
 
 legend('Theoretical value', 'Simulated value', 'Location', 'best')
 
-export_pdf_figure(gcf, ['Temp Fig/' num2str(totalNeuron1) ' neurons vs ' num2str(totalNeuron2) ' neurons'], 0)
+export_pdf_figure(gcf, ['Fig/' num2str(totalNeuron1) ' neurons vs ' num2str(totalNeuron2) ' neurons'], 0)
